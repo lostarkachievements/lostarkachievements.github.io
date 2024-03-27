@@ -1,0 +1,1 @@
+export type LAYOUT = Readonly<{ children: React.ReactNode }>
