@@ -1,0 +1,43 @@
+body > div.layout {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+
+    background-color: #111518;
+    height: 800px;
+    width: 1100px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    padding: 12px;
+    display: grid;
+    grid-template-areas: "gAside gHeader"
+        "gAside gMain";
+    grid-template-columns: 30% auto;
+    grid-template-rows: 45px auto;
+    > header { grid-area: gHeader; }
+    > aside { grid-area: gAside; }
+    > main { grid-area: gMain; }
+
+    > header {
+        position: relative;
+
+        > * {
+            color: #ecdcb1;
+            
+            position: absolute;
+            margin: auto;
+            inset: 0;
+            width: min-content;
+            height: min-content;
+        }
+    }
+
+    > aside {
+        overflow-y: scroll;
+    }
+
+    > main {
+        overflow-y: scroll;
+    }
+}
